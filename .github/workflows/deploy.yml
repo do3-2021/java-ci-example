@@ -26,3 +26,9 @@ jobs:
 
       - name: Generate the javadoc
         run: mvn -B javadoc:javadoc
+
+      - name: Push the javadoc to the gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: target/site/apidocs
